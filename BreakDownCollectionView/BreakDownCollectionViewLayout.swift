@@ -85,8 +85,4 @@ class BreakDownCollectionViewLayout: UICollectionViewLayout {
         return layoutAttributes
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
-    }
-    
 }

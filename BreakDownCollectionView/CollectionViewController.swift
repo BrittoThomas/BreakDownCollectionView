@@ -50,20 +50,18 @@ extension CollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == (cellCount - 2) {
             if cellCount > minCellCount {
-                let lastItemIndex = IndexPath.init(row: (indexPath.row + 1), section: indexPath.section)
-                 self.cellCount -= 1
+                 cellCount -= 1
                 collectionView.performBatchUpdates({
-                    collectionView.deleteItems(at: [lastItemIndex])
+                    collectionView.deleteItems(at: [IndexPath.init(row: (indexPath.row + 1), section: indexPath.section)])
                 },completion: { (success) in
                    
                 })
             }
         }else if indexPath.row == (cellCount - 1) {
             if cellCount < maxCellCount {
-                let newItemIndex = IndexPath.init(row: (indexPath.row + 1), section: indexPath.section)
-                 self.cellCount += 1
+                 cellCount += 1
                 collectionView.performBatchUpdates({
-                    collectionView.insertItems(at: [newItemIndex])
+                    collectionView.insertItems(at: [IndexPath.init(row: (indexPath.row + 1), section: indexPath.section)])
                 },completion: { (success) in
                    
                 })
