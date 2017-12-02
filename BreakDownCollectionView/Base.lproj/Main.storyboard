@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAj-gK-gKh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="X08-Dh-2bQ">
+            <objects>
+                <collectionViewController id="NAj-gK-gKh" customClass="CollectionViewController" customModule="BreakDownCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fjg-49-mYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="92C-sE-oLb" customClass="BreakDownCollectionViewLayout" customModule="BreakDownCollectionView" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BreakDownCell" id="etp-fo-qgV" customClass="BreakDownCell" customModule="BreakDownCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQj-UA-43a">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heu-ZH-Ycf">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Heu-ZH-Ycf" secondAttribute="trailing" id="3OZ-xv-Jl7"/>
+                                    <constraint firstItem="Heu-ZH-Ycf" firstAttribute="top" secondItem="etp-fo-qgV" secondAttribute="top" id="6bc-ON-pfb"/>
+                                    <constraint firstItem="AQj-UA-43a" firstAttribute="leading" secondItem="etp-fo-qgV" secondAttribute="leading" id="Bto-oj-IC4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Heu-ZH-Ycf" secondAttribute="bottom" id="Qkn-fx-HuQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="AQj-UA-43a" secondAttribute="trailing" id="cTC-Vj-aJw"/>
+                                    <constraint firstItem="Heu-ZH-Ycf" firstAttribute="leading" secondItem="etp-fo-qgV" secondAttribute="leading" id="kiL-qN-Dm8"/>
+                                    <constraint firstItem="AQj-UA-43a" firstAttribute="top" secondItem="etp-fo-qgV" secondAttribute="top" id="n3t-ay-Qtz"/>
+                                    <constraint firstAttribute="bottom" secondItem="AQj-UA-43a" secondAttribute="bottom" id="sWz-O8-JTu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="titleLabel" destination="AQj-UA-43a" id="qpJ-ed-JNY"/>
+                                    <outlet property="viewOverLay" destination="Heu-ZH-Ycf" id="Idx-cq-Dfe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="NAj-gK-gKh" id="fGO-3o-pS7"/>
+                            <outlet property="delegate" destination="NAj-gK-gKh" id="DZx-Wq-6kh"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UW-Zy-BPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445.60000000000002" y="82.3088455772114"/>
+        </scene>
+    </scenes>
+</document>
